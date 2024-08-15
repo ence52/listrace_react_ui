@@ -36,9 +36,9 @@ const Contact =( {label})=> {
     <div className='text-center bg-lightGray py-40 justify-center'>
         <p className='text-2xl tracking-wide font-medium uppercase'>do you want to add your business listing with us?</p>
         <p className='text-base pt-6 font-medium text-textGray'>Listrace offer you to list your business with us and we very much able to promote your Business.</p>
-        <div className='flex justify-center max-w-2xl mx-auto mt-16 shadow  hover:shadow-lg duration-300'>
-          <input  className='h-16 w-full '></input>
-          <button className='font-semibold w-56 rounded bg-themeRed hover:bg-red-500 text-white '><p>Create Account</p></button>
+        <div className='lg:flex justify-center max-w-2xl mx-auto mt-16 lg:shadow space-y-4 lg:space-y-0 hover:shadow-lg duration-300'>
+          <input  className='h-16 w-full shadow lg:shadow-none'></input>
+          <button className='font-semibold w-56 rounded bg-themeRed hover:bg-red-500 text-white p-4 shadow lg:shadow-none'><p>Create Account</p></button>
         </div>
       </div>
   )
@@ -48,7 +48,7 @@ const NewArticles =( {label})=> {
     <div className='text-center py-24 max-w-6xl  mx-auto'>
         <p className='text-2xl tracking-widest font-medium'>NEW AND ARTICLES</p>
         <p className='text-base pt-6 pb-20 text-textGray'>Always upto date with our latest News and Articles</p>
-        <div className='pt-24 flex space-x-8 '>
+        <div className='pt-24  lg:flex lg:space-x-8 '>
           <NewArticlesCard label={"How to find your Desired Place more quickly"} description={"Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed do eiusmod tempore incididunt ut labore et dolore magna."} photoUrl={"https://lh5.googleusercontent.com/p/AF1QipMc1VJnUK3uJjE_NGwbl3vS6IWoPUFCInviQW43=w360-h240-n-k-no"}/>
           <NewArticlesCard label={"How to find your Desired Place more quickly"} description={"Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed do eiusmod tempore incididunt ut labore et dolore magna."} photoUrl={"https://rare-gallery.com/thumbs/513950-architecture.jpg"}/>
           <NewArticlesCard label={"How to find your Desired Place more quickly"} description={"Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed do eiusmod tempore incididunt ut labore et dolore magna."} photoUrl={"https://www.flypgs.com/blog/wp-content/uploads/2024/05/roma-ulusal-modern-sanat-galerisi.jpeg"}/>
@@ -79,12 +79,16 @@ const ReviewSection =( )=> {
     <div className='flex-col py-32 text-center'>
       <p className='text-2xl tracking-widest font-medium'>CLIENTS REVIEWS</p>
       <p className='text-base pt-6 pb-20 text-textGray'>What our client say about us</p>
-      <ul className='flex h-96 w-full justify-center space-x-10'>
+      <ul className='lg:flex hidden h-96 w-full justify-center space-x-10'>
         <ReviewCard/>
         <ReviewCard/>
         <ReviewCard/>
         <ReviewCard/>
         <ReviewCard/>
+      </ul>
+      <ul className='flex lg:hidden h-96 w-full justify-center space-x-10'>
+        <ReviewCard/>
+        
       </ul>
       </div>
   )
@@ -93,7 +97,7 @@ const ReviewCard =( )=> {
   return(
     <li className=' aspect-square h-full  flex-col text-balance py-6 px-6 space-y-5 hover:shadow-xl content-center'>
     <div className='flex items-end space-x-4' >
-      <img className='h-12 w-12 rounded-full' src='https://avatar.iran.liara.run/public/49'></img>
+      <img className='h-12 w-12 rounded-full' src='https://w7.pngwing.com/pngs/574/369/png-transparent-avatar-computer-icons-user-random-icons-purple-blue-heroes.png'></img>
       <div className='text-start space-y-1'>
         <p className='font-semibold text-xl'>Tom Leakar</p>
         <p className='text-textGray text-base'>London, UK</p>
@@ -114,7 +118,7 @@ const ReviewCard =( )=> {
 }
 const NumbersSection =( {label})=> {
   return(
-    <div  className='w-full h-96 relative bg-parallax-image space-x-10 flex justify-center items-center bg-no-repeat bg-cover bg-center bg-fixed'>
+    <div  className='w-full h-[450px] lg:h-96 relative bg-parallax-image space-x-10 lg:flex lg:justify-center content-center text-center lg:items-center bg-no-repeat bg-cover bg-center bg-fixed'>
           <NumbersSectionItem label={"90K+"} description={"Listings"}/>
           <NumbersSectionItem label={"40K+"} description={"Listing Categories"}/>
           <NumbersSectionItem label={"65K+"} description={"Visitors"}/>
@@ -136,7 +140,7 @@ const Explore =( )=> {
         <p className='text-2xl tracking-widest font-medium'>EXPLORE</p>
         <p className='text-base pt-6 pb-20 text-textGray'>Explore New place, food, culture around the world and many more</p>
         <div className='max-w-6xl  mx-auto w-full  '>
-          <ul className='grid grid-cols-3 gap-4 capitalize'>
+          <ul className='grid grid-cols-1 lg:grid-cols-3 gap-4 capitalize'>
           <ExploreCard photoUrl="https://images.pexels.com/photos/331107/pexels-photo-331107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" label="Tommy Hilfinger Bar" isOpen={false} price={"5$-300$"} type={"Restaurent"} rate={"5.0"}/>
           <ExploreCard photoUrl="https://cf.bstatic.com/xdata/images/hotel/max1024x768/484875937.jpg?k=478e43b57c362ccdab34c99ce512b99eca67e2a03dde2afd4c5a57da5fc71cb9&o=&hp=1" label="swim and dine resort" isOpen={true} price={"50$-500$"} type={"Hotel"} rate={"5.0"}/>
           <ExploreCard photoUrl="https://yalniziyigezdik.com/wp-content/uploads/2017/11/hallstatt-gol-manzara.jpg" label="europe tour" isOpen={false} price={"5k$-10k$"} type={"Destination"} rate={"5.0"}/>
@@ -183,7 +187,7 @@ const HowItWorks =( {label})=> {
         <p className='font-medium text-textDarkGray text-xl tracking-wider'>HOW IT WORKS</p>
         <p className='font-normal text-textGrey text-sm tracking-wider'>Learn More about how our website works</p>
         <div className='w-full '>
-          <ul className=' grid grid-cols-3 gap-4'>
+          <ul className=' grid grid-cols-1 lg:grid-cols-3 gap-4'>
             <HowItWorksCard icon={faLightbulb} label={"Choose what to Do"} description={"Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua."}/>
             <HowItWorksCard icon={faSearch} label={"Find what you want"} description={"Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua."}/>
             <HowItWorksCard icon={faLocationDot} label={"Explore amazing place"} description={"Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua."}/>
@@ -195,7 +199,7 @@ const HowItWorks =( {label})=> {
 }
 const TopBar =( {label})=> {
   return(
-    <div className='h-10 w-full px-4 border-b-[1px] flex items-center justify-between text-gray-400'>
+    <div className='h-10 w-full px-4 border-b-[1px] hidden lg:flex items-center justify-between text-gray-400'>
       <div className=' flex space-x-4 items-center text-sm'>
         <select  >
           <option>
@@ -254,7 +258,7 @@ const Hero =( {label})=> {
         <div className='h-full w-full absolute inset-0 bg-white opacity-20'></div>
         <HeroContent/>
         <div className='h-40  absolute -bottom-16 max-w-6xl flex'>
-          <ul className='flex flex-row justify-between space-x-6'>
+          <ul className='lg:flex hidden justify-between space-x-6'>
             <HeroCard icon={faUtensils} label={"Restaurant"} description={"150 listings"}/>
             <HeroCard icon={faBagShopping} label={"Destination"} description={"214 listings"}/>
             <HeroCard icon={faHotel} label={"Hotels"} description={"185 listings"}/>
@@ -269,15 +273,17 @@ const Hero =( {label})=> {
 
 const HeroContent =( {label})=> {
   return(
-    <div className='max-w-6xl  absolute top-0 text-white  text-center pt-36 '>
+    <div className='max-w-6xl  absolute top-0 text-white  text-center lg:pt-36 pt-16 '>
           <h1 className='text-5xl font-bold tracking-widest '>BEST PLACE TO FIND AND EXPLORE <br/> THAT ALL YOU NEED</h1>
           <p className='pt-10 tracking-wide'>Find Best Place, Restaurant, Hotel, Real State and many more think in just One click</p>
-          <div className='flex justify-between space-x-8 pt-16'>
+          <div className='lg:flex lg:justify-between lg:space-x-8 pt-16 space-y-4 lg:space-y-0'>
           <SearchBar  />
-          <button className='flex items-center rounded justify-center gap-4 w-40 bg-themeRed hover:bg-red-500 text-xs '>
-            <p>Search</p>
-            <FontAwesomeIcon icon={faSearch}/>
-          </button>
+          <div className='flex justify-center w-full lg:w-auto'>
+              <button className='flex items-center rounded justify-center gap-4 w-40 bg-themeRed hover:bg-red-500 text-xs p-4'>
+              <p>Search</p>
+              <FontAwesomeIcon icon={faSearch} />
+              </button>
+            </div>
           </div>
         </div>
   )
@@ -293,7 +299,7 @@ const SearchBarItem =( {label,icon,placeholder})=> {
 }
 const SearchBar =( {label})=> {
   return(
-    <div className='flex gap-0 w-full '>
+    <div className='lg:flex gap-0 w-full space-y-4 lg:space-y-0'>
             <SearchBarItem label={"What?"} icon={faList} placeholder={"Ex: palce, resturent, food, automobile"}/>
             <SearchBarItem label={"Location"} icon={faLocationCrosshairs} placeholder={"Ex: london, newyork, rome"}/>
     </div>
@@ -301,10 +307,10 @@ const SearchBar =( {label})=> {
 }
 
 const Navbar = ()=>{
-  return (<div className="max-w-6xl text-textGray mx-auto flex items-center justify-between  py-8">
+  return (<div className="w-full lg:max-w-6xl text-textGray lg:mx-auto flex items-center justify-between  py-8">
     <a href='#' className='font-bold text-xl text-black'>List<span className='text-themeRed'>Race</span></a>
     <nav >
-     <ul className='flex gap-10'>
+     <ul className='hidden  lg:flex gap-10'>
        <NavbarButton label={"Home"}/>
        <NavbarButton label={"How It Works"}/>
        <NavbarButton label={"Explore"}/>
@@ -318,10 +324,10 @@ const Navbar = ()=>{
 }
 const BottomNavbar = ()=>{
   return (<div className='max-w-6xl text-textGray mx-auto ' >
-    <div className=" flex items-center justify-between py-12 border-b-[1px] ">
+    <div className=" lg:flex items-center justify-between py-12 border-b-[1px] lg:space-y-0 space-y-4">
     <a href='#' className='font-bold text-xl text-black'>List<span className='text-themeRed'>Race</span></a>
     <nav >
-     <ul className='flex gap-10'>
+     <ul className='lg:flex lg:gap-10 space-y-2'>
        <NavbarButton label={"How It Works"}/>
        <NavbarButton label={"Explore"}/>
        <NavbarButton label={"Review"}/>
@@ -331,13 +337,14 @@ const BottomNavbar = ()=>{
      </ul>
     </nav>
    </div>
-   <div className='justify-between flex pt-12 capitalize text-sm items-center pb-40'>
+   <div className='lg:justify-between lg:flex space-y-6 pt-12  capitalize text-sm items-center pb-40 '>
       <p>© copyright. designed and developed by themesine</p>
-      <ul className='flex space-x-4 text-textGray'>
-        <li className='text-xs flex items-center pr-8 hover:text-themeRed duration-300'>
+      <div className='text-xs flex items-center justify-center lg:pr-8 hover:text-themeRed duration-300'>
           <FontAwesomeIcon  icon={faPhone}/>
           <p>+1 (222) 777 8888</p>
-        </li>
+        </div>
+      <ul className='flex space-x-4 text-textGray justify-center'>
+        
         <li className='h-8 w-8 bg-lightGray rounded-full flex justify-center items-center hover:text-white hover:bg-themeRed text-sm font-extralight duration-300'>
         <FontAwesomeIcon  icon={faFacebookF}/>
         </li>
